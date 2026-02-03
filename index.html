@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nelbrain Nigerian Limited | Premium Construction & Agro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <style>
+        :root {
+            --glass: rgba(255, 255, 255, 0.07);
+            --glass-border: rgba(255, 255, 255, 0.15);
+            --accent: #d4af37; /* Metallic Gold */
+            --bg-dark: #0a0f0d;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background Gradients */
+        .bg-gradient {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 10% 20%, rgba(26, 71, 42, 0.3) 0%, transparent 40%),
+                        radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 8%;
+            position: absolute;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            background-image: linear-gradient(to right, var(--bg-dark) 30%, transparent), 
+                              url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content { max-width: 700px; }
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 40px;
+            border-left: 3px solid var(--accent);
+            padding-left: 20px;
+        }
+
+        /* Liquid Glass Buttons */
+        .btn-group { display: flex; gap: 20px; flex-wrap: wrap; }
+
+        .glass-btn {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            padding: 15px 35px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .glass-btn:hover {
+            background: var(--accent);
+            color: var(--bg-dark);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
+
+        /* Services Cards */
+        .section-padding { padding: 100px 8%; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            padding: 40px;
+            border-radius: 24px;
+            transition: 0.5s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card:hover {
+            border-color: var(--accent);
+            transform: scale(1.02);
+        }
+
+        .glass-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        /* Scroll Animation Utility */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        footer {
+            padding: 50px 8%;
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            background: rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-gradient"></div>
+
+    <nav>
+        <div class="logo">NELBRAIN</div>
+        <div class="glass-btn" style="padding: 10px 25px; font-size: 0.9rem;">EST. 2015</div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content animate__animated animate__fadeInLeft">
+            <h1 class="animate__animated animate__fadeInUp animate__delay-1s">Building the Future,<br>Cultivating the Land.</h1>
+            <p>Nelbrain Nigerian Limited integrates architectural precision with agricultural innovation to drive national growth.</p>
+            
+            <div class="btn-group">
+                <a href="https://wa.me/2348035471923" class="glass-btn">
+                    <span>Chat on WhatsApp</span>
+                </a>
+                <a href="tel:+2348035471923" class="glass-btn" style="background: rgba(255,255,255,0.1);">
+                    <span>Call Inquiries</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <h2 style="font-size: 2.5rem;" class="reveal">Our Core Divisions</h2>
+        <div class="grid">
+            <div class="glass-card reveal">
+                <h3>01. Construction</h3>
+                <p>Civil engineering and structural development tailored for durability. From urban residential complexes to industrial infrastructure.</p>
+            </div>
+            <div class="glass-card reveal">
+                <h3>02. Agro-Products</h3>
+                <p>Bridging the gap between the farm and the market. We specialize in large-scale production and sustainable supply chains.</p>
+            </div>
+            <div class="glass-card reveal">
+                <h3>03. Consultancy</h3>
+                <p>Strategic advisory for high-stakes investments in real estate and the Nigerian agricultural sector.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2015 Nelbrain Nigerian Limited</p>
+        <p style="color: var(--accent); margin-top: 10px;">Nelbrainnigerianlimited@gmail.com</p>
+    </footer>
+
+    <script>
+        // Intersection Observer for Reveal Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+
+</body>
+</html>
